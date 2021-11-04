@@ -20,7 +20,7 @@ function doPostArquivo(url, idA, idU, nome, conteudo) {
 }
 
 var postArquivo = function (idA, idU, nome, conteudo) {
-    doPostArquivo('https:/sistemasdistribuidosserver.herokuapp.com/api/arquivos/novo', idA, idU, nome, conteudo);
+    doPostArquivo('/api/arquivos/novo', idA, idU, nome, conteudo);
 }
 
 async function upload() {
@@ -76,7 +76,7 @@ function upload2() {
     formData.append("idUsuario", idUsuario);
     formData.append("nome", nome);
     formData.append("conteudo", arquivo);
-    fetch('https:/sistemasdistribuidosserver.herokuapp.com/api/arquivos/novo', { method: "POST", body: formData });
+    fetch('/api/arquivos/novo', { method: "POST", body: formData });
 }
 
 function getBase64(file) {
@@ -105,7 +105,7 @@ window.onload = function () {
 }
 
 async function carregarArquivos(id) {
-    var url = 'https:/sistemasdistribuidosserver.herokuapp.com/api/arquivos/listar/' + id;
+    var url = '/api/arquivos/listar/' + id;
     console.log(url);
     fetch(url)
         .then(function (response) {
@@ -153,5 +153,5 @@ function doPostSolicitar(url, idA) {
 }
 
 var postSolicitar = function (idA) {
-    doPostSolicitar('https:/sistemasdistribuidosserver.herokuapp.com/api/requisicoes/solicitar', idA);
+    doPostSolicitar('/api/requisicoes/solicitar', idA);
 }
