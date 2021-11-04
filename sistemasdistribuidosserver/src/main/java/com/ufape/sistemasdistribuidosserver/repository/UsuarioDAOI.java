@@ -21,6 +21,6 @@ public interface UsuarioDAOI extends JpaRepository<Usuario, Long> {
     @Query("select u from Usuario u where u.nome=:nome")
     public Optional<Usuario> findUsuarioByUsename(String nome);
 
-    @Query(nativeQuery = true, value = "SELECT id FROM usuario where id!=:idUsuario ORDER BY RAND() LIMIT 2")
+    @Query(nativeQuery = true, value = "SELECT id FROM usuario where id!=:idUsuario ORDER BY RANDOM() LIMIT 2")
     public List<Long> obterUsuarios(Long idUsuario);
 }
