@@ -22,7 +22,7 @@ function doPostUsuario(url, idU, nome, senha, espacoSolicitado, espacoDisponivel
 
 var postUsuario = function (idU, nome, senha, espacoSolicitado, espacoDisponivel) {
     
-    doPostUsuario('http://localhost:8080/api/usuarios/', idU, nome, senha, espacoSolicitado, espacoDisponivel);
+    doPostUsuario('https:/sistemasdistribuidosserver.herokuapp.com/api/usuarios/', idU, nome, senha, espacoSolicitado, espacoDisponivel);
 
 }
 
