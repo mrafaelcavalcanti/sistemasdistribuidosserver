@@ -22,11 +22,13 @@ public class Usuario implements Serializable {
     private String espacoSolicitado;
     @Column(name = "espaco_disponivel")
     private String espacoDisponivel;
+    @Column(name = "diretorio")
+    private String diretorio;
 
-    public Usuario() {
+	public Usuario() {
     }
 
-    public Usuario(Long id, String nome, String senha, String espacoSolicitado, String espacoDisponivel) {
+    public Usuario(Long id, String nome, String senha, String espacoSolicitado, String espacoDisponivel, String diretorio) {
     }
 
     public Long getId() {
@@ -68,5 +70,13 @@ public class Usuario implements Serializable {
     public void setEspacoDisponivel(String espacoDisponivel) {
         this.espacoDisponivel = espacoDisponivel;
     }
+    
+    public String getDiretorio() {
+		return diretorio;
+	}
+
+	public void setDiretorio(String diretorio) {
+		this.diretorio = diretorio;
+	}
 
 }
