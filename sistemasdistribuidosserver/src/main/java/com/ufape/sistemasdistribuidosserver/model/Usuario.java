@@ -25,10 +25,16 @@ public class Usuario implements Serializable {
     @Column(name = "diretorio")
     private String diretorio;
 
-	public Usuario() {
+    public Usuario() {
     }
 
     public Usuario(Long id, String nome, String senha, String espacoSolicitado, String espacoDisponivel, String diretorio) {
+        this.id = id;
+        this.nome = nome;
+        this.senha = senha;
+        this.espacoSolicitado = espacoSolicitado;
+        this.espacoDisponivel = espacoDisponivel;
+        this.diretorio = diretorio;
     }
 
     public Long getId() {
@@ -70,7 +76,7 @@ public class Usuario implements Serializable {
     public void setEspacoDisponivel(String espacoDisponivel) {
         this.espacoDisponivel = espacoDisponivel;
     }
-    
+
     public String getDiretorio() {
 		return diretorio;
 	}

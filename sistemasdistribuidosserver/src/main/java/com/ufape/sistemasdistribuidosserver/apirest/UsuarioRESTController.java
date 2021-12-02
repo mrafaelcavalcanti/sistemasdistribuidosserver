@@ -26,14 +26,14 @@ public class UsuarioRESTController {
         Usuario novoUsuario = usuarioDAOI.save(usuario);
         return novoUsuario;
     }
-    
+
     @PostMapping("login")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public Usuario login(@RequestBody Login login) {
     	Usuario usuario = usuarioDAOI.findUsuario(login.getNome(), login.getSenha());
-    	
+
     	if (usuario != null) return usuario;
-    	
+
     	throw new ResponseStatusException(
 		  HttpStatus.NOT_FOUND, "Usuário ou senha incorretos"
 		);

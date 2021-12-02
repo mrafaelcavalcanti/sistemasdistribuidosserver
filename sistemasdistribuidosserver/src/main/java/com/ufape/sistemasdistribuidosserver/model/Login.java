@@ -3,7 +3,7 @@ package com.ufape.sistemasdistribuidosserver.model;
 public class Login {
 	private String nome;
 	private String senha;
-	
+
 	public Login(String nome, String senha) {
 		this.nome = nome;
 		this.senha = senha;

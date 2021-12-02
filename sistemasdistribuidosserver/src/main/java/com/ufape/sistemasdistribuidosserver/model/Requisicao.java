@@ -22,15 +22,17 @@ public class Requisicao implements Serializable {
 	private Long idArquivo;
 	@Column(name = "tipo_requisicao")
 	private Long tipoRequisicao;
+	private Boolean ativo;
 
 	public Requisicao() {
 	}
 
-	public Requisicao(Long id, Long idUsuario, Long idArquivo, Long tipoRequisicao) {
+	public Requisicao(Long id, Long idUsuario, Long idArquivo, Long tipoRequisicao, Boolean ativo) {
 		this.id = id;
 		this.idUsuario = idUsuario;
 		this.idArquivo = idArquivo;
 		this.tipoRequisicao = tipoRequisicao;
+		this.ativo = ativo;
 	}
 
 	public Long getId() {
@@ -65,4 +67,11 @@ public class Requisicao implements Serializable {
 		this.tipoRequisicao = tipoRequisicao;
 	}
 
+	public Boolean getAtivo() {
+		return this.ativo;
+	}
+
+	public void setAtivo(Boolean ativo) {
+		this.ativo = ativo;
+	}
 }

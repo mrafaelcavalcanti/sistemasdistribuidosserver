@@ -16,4 +16,5 @@ public interface ArquivosCompartilhadosUsuariosDAOI extends JpaRepository<Arquiv
 
     @Query("SELECT a FROM ArquivosCompartilhadosUsuarios a WHERE a.idArquivo=:idArquivo")
     public List<ArquivosCompartilhadosUsuarios> findAllByIdArquivo(Long idArquivo);
+
 }

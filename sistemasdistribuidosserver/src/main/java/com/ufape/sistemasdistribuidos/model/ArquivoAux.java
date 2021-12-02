@@ -1,32 +1,24 @@
-package com.ufape.sistemasdistribuidosserver.model;
+package com.ufape.sistemasdistribuidos.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table (name = "arquivo")
-public class Arquivo implements Serializable {
+/**
+ *
+ * @author rafael.cavalcanti
+ */
+public class ArquivoAux implements Serializable {
 
     private static final long serialVersionUID = -8298381724524406275L;
-    
-    @Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
-    @Column(name = "id_usuario")
     private Long idUsuario;
     private String nome;
     private byte[] conteudo;
 
-    public Arquivo() {
+    public ArquivoAux() {
     }
 
-    public Arquivo(Long id, Long idUsuario, String nome, byte[] conteudo) {
+    public ArquivoAux(Long id, Long idUsuario, String nome, byte[] conteudo) {
         this.id = id;
         this.idUsuario = idUsuario;
         this.nome = nome;
@@ -42,7 +34,7 @@ public class Arquivo implements Serializable {
     }
 
     public Long getIdUsuario() {
-        return this.idUsuario;
+        return idUsuario;
     }
 
     public void setIdUsuario(Long idUsuario) {
