@@ -100,7 +100,7 @@ public class ArquivoRESTController {
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Arquivo> enviar(@RequestBody byte[] arquivo) throws ClassNotFoundException, IOException {
         
-    	ArquivoAux nArquivo = SerializationUtils.deserialize(arquivo);
+    	ArquivoAux nArquivo = (ArquivoAux) SerializationUtils.deserialize(arquivo);
         Arquivo novoArquivo = new Arquivo();
         novoArquivo.setIdUsuario(nArquivo.getIdUsuario());
         novoArquivo.setNome(nArquivo.getNome());
