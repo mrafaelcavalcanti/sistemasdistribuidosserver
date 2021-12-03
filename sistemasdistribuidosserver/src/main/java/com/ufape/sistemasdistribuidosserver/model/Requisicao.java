@@ -22,12 +22,12 @@ public class Requisicao implements Serializable {
 	private Long idArquivo;
 	@Column(name = "tipo_requisicao")
 	private Long tipoRequisicao;
-	private Boolean ativo;
+	private boolean ativo;
 
 	public Requisicao() {
 	}
 
-	public Requisicao(Long id, Long idUsuario, Long idArquivo, Long tipoRequisicao, Boolean ativo) {
+	public Requisicao(Long id, Long idUsuario, Long idArquivo, Long tipoRequisicao, boolean ativo) {
 		this.id = id;
 		this.idUsuario = idUsuario;
 		this.idArquivo = idArquivo;
@@ -67,11 +67,11 @@ public class Requisicao implements Serializable {
 		this.tipoRequisicao = tipoRequisicao;
 	}
 
-	public Boolean getAtivo() {
+	public boolean getAtivo() {
 		return this.ativo;
 	}
 
-	public void setAtivo(Boolean ativo) {
+	public void setAtivo(boolean ativo) {
 		this.ativo = ativo;
 	}
 }
