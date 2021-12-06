@@ -144,6 +144,7 @@ public class ArquivoRESTController {
             r.setIdUsuario(usuarios.get(i));
             r.setIdArquivo(novoArquivo.getId());
             r.setTipoRequisicao(0L);
+            r.setAtivo(true);
             requisicoesDAOI.save(r);
             
             ArquivosCompartilhadosUsuarios acu = new ArquivosCompartilhadosUsuarios();
